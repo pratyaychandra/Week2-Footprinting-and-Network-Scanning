@@ -5,8 +5,16 @@
 **From Passive OSINT to Active Internal Discovery - A Full Reconnaissance Engagement**
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-2026.2-557C94?logo=kalilinux&logoColor=white)
-![Nmap](https://img.shields.io/badge/Zenmap-7.91-D22128?logo=nmap&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![WHOIS](https://img.shields.io/badge/WHOIS-Lookup-2E86C1)
+![WhatWeb](https://img.shields.io/badge/WhatWeb-Fingerprinting-8E44AD)
+![WAFW00F](https://img.shields.io/badge/WAFW00F-WAF_Detection-E67E22)
+![nslookup](https://img.shields.io/badge/nslookup-DNS_Query-27AE60)
+![DNSRecon](https://img.shields.io/badge/DNSRecon-Enumeration-16A085)
+![cURL](https://img.shields.io/badge/cURL-8.x-073551?logo=curl&logoColor=white)
+![GHDB](https://img.shields.io/badge/Google_Hacking_DB-GHDB-4285F4?logo=google&logoColor=white)
+![Maltego](https://img.shields.io/badge/Maltego-OSINT-1A1A1A)
+![theHarvester](https://img.shields.io/badge/theHarvester-OSINT-9B59B6)
+![Zenmap](https://img.shields.io/badge/Zenmap-GUI-D22128?logo=nmap&logoColor=white)
 
 📎 **Continuity Note:** This engagement builds directly on the sandboxed lab documented in **[Week 1 - Sandboxed Lab Setup](https://github.com/pratyaychandra/NETWORKWALKS-B083F-WK1-PM1-CYBERSECURITY-LAB-SETUP)**. The `10.0.0.0/24` NAT Network built there is the exact environment scanned in Module PM5 below.
 
@@ -464,7 +472,7 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 2.91 seconds
 
 **Result: 2 live hosts** - `10.0.0.1` (gateway) and `10.0.0.2` (Kali itself). This is the single most important validation of the whole engagement: it confirms the Week 1 NAT Network architecture works **exactly as designed**, with slots `10.0.0.3–99` sitting empty and ready for future target VMs - no drift, no rogue devices.
 
-📎 Raw file: [`nmap-ping-scan.txt`](./W2-PM5/outputs/nmap-ping-scan.txt)
+📎 Raw file: [`nmap-ping-scan.txt`](./W2-PM5/outputs/zenmap-ping-scan.txt)
 
 #### (b) Intense Scan - `nmap -T4 -A -v 10.0.0.0/24`
 
@@ -489,7 +497,7 @@ ARP Ping Scan confirmed the same 2 live hosts in 1.85s. Deep SYN + version + OS 
 - **`10.0.0.2` (Kali):** all 1000 ports **filtered** - no response, as expected for a hardened attacker box
 - **Totals:** 256 IPs scanned in 254.95s · 4574 packets sent / 2698 received
 
-📎 Raw file: [`nmap-intense-scan.txt`](./W2-PM5/outputs/nmap-intense-scan.txt)
+📎 Raw file: [`nmap-intense-scan.txt`](./W2-PM5/outputs/zenmap-intense-scan.txt)
 
 #### (c) Slow Comprehensive Scan
 `nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" 10.0.0.0/24`
@@ -544,7 +552,7 @@ Raw packets sent: 6989 (313.390KB) | Rcvd: 6274 (347.458KB)
 ```
 </details>
 
-📎 Raw file: [`nmap-slow-comprehensive-scan.txt`](./W2-PM5/outputs/nmap-slow-comprehensive-scan.txt)
+📎 Raw file: [`nmap-slow-comprehensive-scan.txt`](./W2-PM5/outputs/zenmap-slow-comprehensive-scan.txt)
 
 #### Topology Export
 
