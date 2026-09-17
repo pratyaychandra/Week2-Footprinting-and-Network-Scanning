@@ -5,7 +5,7 @@
 **From Passive OSINT to Active Internal Discovery — A Full Reconnaissance Engagement**
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-2026.2-557C94?logo=kalilinux&logoColor=white)
-![Nmap](https://img.shields.io/badge/%2FZenmap-7.99-D22128?logo=nmap&logoColor=white)
+![Nmap](https://img.shields.io/badge/Zenmap-7.91-D22128?logo=nmap&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 📎 **Continuity Note:** This engagement builds directly on the sandboxed lab documented in **[Week 1 — Sandboxed Lab Setup](https://github.com/pratyaychandra/NETWORKWALKS-B083F-WK1-PM1-CYBERSECURITY-LAB-SETUP)**. The `10.0.0.0/24` NAT Network built there is the exact environment scanned in Module PM5 below.
