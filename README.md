@@ -2,13 +2,13 @@
 
 # 🛡️ Week 2 — Footprinting & Network Scanning
 
-**From Passive OSINT to Active Internal Discovery — A Full Reconnaissance Engagement**
+**From Passive OSINT to Active Internal Discovery - A Full Reconnaissance Engagement**
 
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-2026.2-557C94?logo=kalilinux&logoColor=white)
 ![Nmap](https://img.shields.io/badge/Zenmap-7.91-D22128?logo=nmap&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-📎 **Continuity Note:** This engagement builds directly on the sandboxed lab documented in **[Week 1 — Sandboxed Lab Setup](https://github.com/pratyaychandra/NETWORKWALKS-B083F-WK1-PM1-CYBERSECURITY-LAB-SETUP)**. The `10.0.0.0/24` NAT Network built there is the exact environment scanned in Module PM5 below.
+📎 **Continuity Note:** This engagement builds directly on the sandboxed lab documented in **[Week 1 - Sandboxed Lab Setup](https://github.com/pratyaychandra/NETWORKWALKS-B083F-WK1-PM1-CYBERSECURITY-LAB-SETUP)**. The `10.0.0.0/24` NAT Network built there is the exact environment scanned in Module PM5 below.
 
 </div>
 
@@ -19,13 +19,13 @@
 - [Engagement Brief](#engagement-brief)
 - [Legal & Ethical Notice](#legal--ethical-notice)
 - [Objective & Scope](#objective--scope)
-- [Arsenal — Tools Used](#arsenal--tools-used)
+- [Arsenal - Tools Used](#arsenal--tools-used)
 - [Activities Performed](#activities-performed)
-  - [PM1 — Footprinting with Multiple Kali Tools](#pm1--footprinting-with-multiple-kali-tools)
-  - [PM2 — Footprinting with GHDB](#pm2--footprinting-with-ghdb-google-hacking-database)
-  - [PM3 — Footprinting with Maltego](#pm3--footprinting-with-maltego)
-  - [PM4 — Footprinting with theHarvester](#pm4--footprinting-with-theharvester)
-  - [PM5 — Network Scanning with Zenmap/Nmap](#pm5--network-scanning-with-zenmapnmap)
+  - [PM1 - Footprinting with Multiple Kali Tools](#pm1--footprinting-with-multiple-kali-tools)
+  - [PM2 - Footprinting with GHDB](#pm2--footprinting-with-ghdb-google-hacking-database)
+  - [PM3 - Footprinting with Maltego](#pm3--footprinting-with-maltego)
+  - [PM4 - Footprinting with theHarvester](#pm4--footprinting-with-theharvester)
+  - [PM5 - Network Scanning with Zenmap/Nmap](#pm5--network-scanning-with-zenmapnmap)
 - [Reconnaissance Progression](#reconnaissance-progression)
 - [Tool Methodology Comparison](#tool-methodology-comparison)
 - [Risk Analysis](#risk-analysis)
@@ -55,10 +55,10 @@
 
 > This repository documents a **training exercise**, not a real-world penetration test. The following boundaries were respected throughout:
 >
-> - **PM1 (WHOIS / WhatWeb / Nslookup / Curl / Wafw00f / DNSRecon)** was run against `networkwalks.com`, a domain explicitly provided by the course as a sanctioned practice target. Every tool used here only queries information the domain owner has already made publicly available — no exploitation, credential testing, or intrusive probing was performed.
-> - **PM2 (GHDB / Google Dorking)** involved viewing links **already indexed by Google's own crawlers**. No authentication was attempted against any exposed camera or portal, and no files were downloaded beyond what was needed to confirm public accessibility. This exercise demonstrates how such exposures are *discovered*, not how they were *created*.
-> - **PM4 (theHarvester)** was pointed at `microsoft.com` purely as a **passive OSINT aggregation exercise**. No requests were ever sent to Microsoft's own infrastructure — theHarvester only queries third-party public sources (search engines, certificate transparency logs, breach-notification indexes). This does not constitute testing of Microsoft's systems.
-> - **PM5 (Nmap/Zenmap)** is the only *active-scanning* component of this project, and it was run exclusively against `10.0.0.0/24` — the private, self-owned NAT Network built and documented in Week 1. No host outside my own lab was scanned.
+> - **PM1 (WHOIS / WhatWeb / Nslookup / Curl / Wafw00f / DNSRecon)** was run against `networkwalks.com`, a domain explicitly provided by the instructor as a sanctioned practice target. Every tool used here only queries information the domain owner has already made publicly available - no exploitation, credential testing or intrusive probing was performed.
+> - **PM2 (GHDB / Google Dorking)** involved viewing links **already indexed by Google's own crawlers**. No authentication was attempted against any exposed camera or portal and no files were downloaded beyond what was needed to confirm public accessibility. This exercise demonstrates how such exposures are *discovered*, not how they were *created*.
+> - **PM4 (theHarvester)** was pointed at `microsoft.com` purely as a **passive OSINT aggregation exercise**. No requests were ever sent to Microsoft's own infrastructure - theHarvester only queries third-party public sources (search engines, certificate transparency logs, breach-notification indexes). This does not constitute testing of Microsoft's systems.
+> - **PM5 (Nmap/Zenmap)** is the only *active-scanning* component of this project, and it was run exclusively against `10.0.0.0/24` - the private, self owned NAT Network built and documented in Week 1. No host outside my own lab was scanned.
 >
 > I am solely responsible for keeping all activity shown here within these boundaries. Replicating active scanning or intrusive techniques from this repo against any system you do not own or have **written permission** to test is illegal in most jurisdictions and is explicitly discouraged.
 
@@ -66,7 +66,7 @@
 
 ## Objective & Scope
 
-This isn't a tool-output dump — it's a documented reconnaissance engagement that moves through five distinct discovery layers:
+This isn't a tool-output dump - it's a documented reconnaissance engagement that moves through five distinct discovery layers:
 
 **Ownership & Metadata → Technology Fingerprint → Public Leak Surface → Relationship Mapping → Multi-Source Aggregation → Internal Network Discovery**
 
@@ -89,19 +89,19 @@ The engagement was built to:
 | Wafw00f | WAF Detection | Identify web application firewall vendor |
 | DNSRecon | DNS Enumeration | Full DNS record sweep (SOA, NS, MX, TXT, SRV) |
 | GHDB (exploit-db.com) + Google Dorking | OSINT | Discover publicly indexed leaks/misconfigurations |
-| Maltego CE 4.11.3 | Visual OSINT | Entity relationship mapping, email harvesting |
+| Maltego CE 4.13 | Visual OSINT | Entity relationship mapping, email harvesting |
 | theHarvester 4.11.1 | OSINT Aggregation | Multi-source email/subdomain/host enumeration |
-| Nmap / Zenmap 7.99 | Network Scanning | Live host discovery, port/service scan, OS fingerprint, topology mapping |
+| Zenmap 7.91 | Network Scanning | Live host discovery, port/service scan, OS fingerprint, topology mapping |
 
 ---
 
 ## Activities Performed
 
-### PM1 — Footprinting with Multiple Kali Tools
+### PM1 - Footprinting with Multiple Kali Tools
 
-**Target:** `networkwalks.com` · **Method:** 6 sequential passive-recon tools, Kali Linux terminal
+**Target:** `networkwalks.com` · **Method:** 6 sequential passive recon tools, Kali Linux terminal
 
-#### Task 1 — WHOIS Lookup
+#### Task 1 - WHOIS Lookup
 `whois networkwalks.com`
 
 ![WHOIS Output 1](./W2-PM1/screenshots/whois-networkwalks-1.png)
@@ -145,7 +145,7 @@ Additional Name Servers: NS29.DOMAINCONTROL.COM, NS30.DOMAINCONTROL.COM
 
 ---
 
-#### Task 2 — WhatWeb Fingerprinting
+#### Task 2 - WhatWeb Fingerprinting
 `whatweb networkwalks.com`
 
 ![WhatWeb Output](./W2-PM1/screenshots/whatweb-networkwalks.png)
@@ -179,7 +179,7 @@ Open-Graph-Protocol[website], Title[Networkwalks Academy], WordPress[7.1]
 
 ---
 
-#### Task 3 — Nslookup Resolution
+#### Task 3 - Nslookup Resolution
 `nslookup networkwalks.com`
 
 ![Nslookup Output](./W2-PM1/screenshots/nslookup-networkwalks.png)
@@ -198,7 +198,7 @@ Address: 192.232.216.135
 
 ---
 
-#### Task 4 — Curl HTTP Headers
+#### Task 4 - Curl HTTP Headers
 `curl -I https://networkwalks.com`
 
 ![Curl Output](./W2-PM1/screenshots/curl-headers-networkwalks.png)
@@ -228,7 +228,7 @@ server: Apache
 
 ---
 
-#### Task 5 — Wafw00f WAF Detection
+#### Task 5 - Wafw00f WAF Detection
 `wafw00f networkwalks.com`
 
 ![Wafw00f Output](./W2-PM1/screenshots/wafw00f-networkwalks.png)
@@ -246,7 +246,7 @@ server: Apache
 
 ---
 
-#### Task 6 — DNSRecon Enumeration
+#### Task 6 - DNSRecon Enumeration
 `dnsrecon -d networkwalks.com`
 
 ![DNSRecon Output](./W2-PM1/screenshots/dnsrecon-networkwalks.png)
@@ -298,13 +298,13 @@ server: Apache
 
 ---
 
-### PM2 — Footprinting with GHDB (Google Hacking Database)
+### PM2 - Footprinting with GHDB (Google Hacking Database)
 
 **Method:** exploit-db.com's GHDB repository → pre-built Google Dorks → verified in live Google search. This is the most passive module in the entire engagement — no request is ever sent to a "target" server until *manually* clicking a link to confirm it's live.
 
 📎 Full methodology + screenshots: [`footprinting-ghdb.docx`](./W2-PM2/footprinting-ghdb.docx)
 
-#### Task 1 — 10 Live, Accessible Security Camera Feeds
+#### Task 1 - 10 Live, Accessible Security Camera Feeds
 
 | No. | Link | Dork Used | Login |
 |---|---|---|---|
@@ -319,7 +319,7 @@ server: Apache
 | 9 | http://46.253.32.35/camera.htm | `intitle:webcamxp inurl:8080` | None |
 | 10 | http://75.149.26.30:1024/ | `intitle:webcamxp inurl:8080` | None |
 
-#### Task 2 — 10 Downloadable Mathematics eBook Repositories
+#### Task 2 - 10 Downloadable Mathematics eBook Repositories
 
 | No. | Link | Dork Used |
 |---|---|---|
@@ -338,11 +338,11 @@ server: Apache
 
 ---
 
-### PM3 — Footprinting with Maltego
+### PM3 - Footprinting with Maltego
 
 **Target:** `networkwalks.com` · **Tool:** Maltego Community Edition 4.11.3
 
-#### Task 1 — Installation
+#### Task 1 - Installation
 
 ![Maltego Install 1](./W2-PM3/screenshots/maltego-installation-1.png)
 ![Maltego Install 2](./W2-PM3/screenshots/maltego-installation-2.png)
@@ -351,7 +351,7 @@ server: Apache
 
 Steps: Java Runtime prerequisite → installer wizard → Maltego ID account creation → browser-based login → Community transforms (Utilities set) installed under Normal privacy mode.
 
-#### Task 2 — Email Harvesting
+#### Task 2 - Email Harvesting
 
 A `Domain` entity was created for `networkwalks.com`, and 4 transforms were run:
 
@@ -384,17 +384,17 @@ A `Domain` entity was created for `networkwalks.com`, and 4 transforms were run:
 
 **Emails discovered:** `info@networkwalks.com`, `abuse@godaddy.com`
 
-**Why this matters:** Each harvested email is a phishing/social-engineering entry point. Maltego's value isn't the data itself (theHarvester or manual Google searches can find the same) — it's the **visual graph** that makes relationships between entities immediately obvious to a non-technical stakeholder.
+**Why this matters:** Each harvested email is a phishing/social-engineering entry point. Maltego's value isn't the data itself (theHarvester or manual Google searches can find the same) - it's the **visual graph** that makes relationships between entities immediately obvious to a non-technical stakeholder.
 
 📎 Project file: [`networkwalks-com.mtgl`](./W2-PM3/files/networkwalks-com.mtgl) · Full report: [`networkwalks-com-maltego-report.pdf`](./W2-PM3/files/networkwalks-com-maltego-report.pdf) · Entity table: [`source-target-entity-table.csv`](./W2-PM3/files/source-target-entity-table.csv)
 
 ---
 
-### PM4 — Footprinting with theHarvester
+### PM4 - Footprinting with theHarvester
 
 **Target:** `microsoft.com` (a large, well-known domain chosen specifically to demonstrate aggregation at scale) · **Tool:** theHarvester 4.11.1
 
-#### Task 1 — Single-Source Search
+#### Task 1 - Single-Source Search
 `theHarvester -d microsoft.com -l 1000 -b baidu`
 
 **Result:** 22 hosts found, 0 IPs, 0 emails via this single source.
@@ -422,19 +422,18 @@ watson.microsoft.com, wcpstatic.microsoft.com
 
 📎 Raw file: [`task1-theharvester-baidu.txt`](./W2-PM4/outputs/task1-theharvester-baidu.txt)
 
-#### Task 2 — Comprehensive Multi-Source Search
+#### Task 2 - Comprehensive Multi-Source Search
 `theHarvester -d microsoft.com -l 50 -b all`
 
-This query hits **27+ data sources simultaneously**. The result set was far too large to embed in full — summarized below with representative highlights, full raw list attached separately.
+This query hits **27+ data sources simultaneously**. The result set was far too large to embed in full - summarized below with representative highlights, full raw list attached separately.
 
 | Category | Result |
 |---|---|
 | ASNs found | 7 (AS13335, AS133618, AS14061, AS206834, AS40034, AS8070, AS8075) |
-| Interesting URLs | 1 (Microsoft OAuth2 authorize URL, via Cloudflare Access) |
+| Interesting URLs | 1 (Microsoft OAuth2 authorize URL via Cloudflare Access) |
 | IPs found | 143 (IPv4 + IPv6 across Azure/Microsoft global infra) |
 | Emails found | 3 → `dotnet-docker-bot@microsoft.com`, `opencode@microsoft.com`, `secure@microsoft.com` |
 | **Hosts found** | **9,957 subdomains** |
-| Errors | Multiple "missing API key" messages (Chaos, Fofa, LeakIX) — expected/normal for free-tier sources |
 
 **Representative subdomains** (out of 9,957): `academy.microsoft.com`, `azure.microsoft.com`, `learn.microsoft.com`, `graph.microsoft.com`, plus internal-looking entries like `redmond.corp.microsoft.com` and `sys-wingroup.ntdev.corp.microsoft.com` — evidence that even a company of Microsoft's security maturity has an enormous, partially internal-facing subdomain footprint discoverable through free, passive tools.
 
@@ -446,12 +445,12 @@ This query hits **27+ data sources simultaneously**. The result set was far too 
 
 **Target:** Own Lab LAN `10.0.0.0/24` (built in Week 1) · **Baseline:** Kali = `10.0.0.2`, Gateway = `10.0.0.1`
 
-> **Methodology disclosure:** The official task requires a single Ping Scan via the Windows Zenmap GUI. As bonus effort, I additionally ran two deeper scans **directly via `nmap` CLI in the Kali terminal** rather than the Windows GUI — all three are documented below for full transparency.
+> **Methodology disclosure:** The official task requires a single Ping Scan via the Windows Zenmap GUI. As bonus effort, I additionally ran two deeper scans **directly via `nmap` CLI in the Kali terminal** rather than the Windows GUI - all three are documented below for full transparency.
 
 ![Zenmap GUI 1](./W2-PM5/screenshots/zenmap-gui-1.png)
 ![Zenmap GUI 2 - Regular Scan](./W2-PM5/screenshots/zenmap-gui-2-regular-scan.png)
 
-#### (a) Ping Scan — `nmap -sn 10.0.0.0/24`
+#### (a) Ping Scan - `nmap -sn 10.0.0.0/24`
 
 ```text
 Starting Nmap 7.99 at 2026-09-16 18:59 +0530
@@ -463,15 +462,15 @@ Host is up.
 Nmap done: 256 IP addresses (2 hosts up) scanned in 2.91 seconds
 ```
 
-**Result: 2 live hosts** — `10.0.0.1` (gateway) and `10.0.0.2` (Kali itself). This is the single most important validation of the whole engagement: it confirms the Week 1 NAT Network architecture works **exactly as designed**, with slots `10.0.0.3–99` sitting empty and ready for future target VMs — no drift, no rogue devices.
+**Result: 2 live hosts** - `10.0.0.1` (gateway) and `10.0.0.2` (Kali itself). This is the single most important validation of the whole engagement: it confirms the Week 1 NAT Network architecture works **exactly as designed**, with slots `10.0.0.3–99` sitting empty and ready for future target VMs - no drift, no rogue devices.
 
 📎 Raw file: [`nmap-ping-scan.txt`](./W2-PM5/outputs/nmap-ping-scan.txt)
 
-#### (b) Intense Scan — `nmap -T4 -A -v 10.0.0.0/24`
+#### (b) Intense Scan - `nmap -T4 -A -v 10.0.0.0/24`
 
 ARP Ping Scan confirmed the same 2 live hosts in 1.85s. Deep SYN + version + OS scan then run against both:
 
-**`10.0.0.1` (Gateway) — 9 open TCP ports found:**
+**`10.0.0.1` (Gateway) - 9 open TCP ports found:**
 
 | Port | Service | Detail |
 |---|---|---|
@@ -485,9 +484,9 @@ ARP Ping Scan confirmed the same 2 live hosts in 1.85s. Deep SYN + version + OS 
 | 19780/tcp | unknown | HTTP 400/404/501 (varies by request) |
 | 49152/tcp | unknown | Unidentified |
 
-- **OS Detection:** Inconclusive — "just guessing" scored AT&T embedded (95%), Oracle VirtualBox (90%), QEMU (89%), no exact match
+- **OS Detection:** Inconclusive - "just guessing" scored AT&T embedded (95%), Oracle VirtualBox (90%), QEMU (89%), no exact match
 - **Host script results:** `smb2-security-mode` → signing **enabled and required** ✅ (a positive control)
-- **`10.0.0.2` (Kali):** all 1000 ports **filtered** — no response, as expected for a hardened attacker box
+- **`10.0.0.2` (Kali):** all 1000 ports **filtered** - no response, as expected for a hardened attacker box
 - **Totals:** 256 IPs scanned in 254.95s · 4574 packets sent / 2698 received
 
 📎 Raw file: [`nmap-intense-scan.txt`](./W2-PM5/outputs/nmap-intense-scan.txt)
@@ -505,19 +504,19 @@ The most thorough scan of the engagement — 303 NSE scripts, full TCP **and** U
 | 445/tcp | open | microsoft-ds | `smb-enum-services` script failed (execution error) |
 | 902/tcp | open | ssl/vmware-auth | VMware Auth Daemon 1.10, banner: "SSL Required" |
 | 912/tcp | open | vmware-auth | VMware Auth Daemon 1.0 |
-| 1001/tcp | open | webpush? | — |
+| 1001/tcp | open | webpush? | - |
 | 5357/tcp | open | http | Microsoft HTTPAPI httpd 2.0, reverse proxy suspected |
 | 9080/tcp | open | glrpc? | HTTP 301 → `about:blank` |
 | 19780/tcp | open | unknown | HTTP 400/404/501 depending on request |
-| 49152/tcp | open | unknown | — |
-| 67/udp | open\|filtered | dhcps | — |
+| 49152/tcp | open | unknown | - |
+| 67/udp | open\|filtered | dhcps | - |
 | **69/udp** | **open** | **tftp** | Fingerprint: xdmcp → "Access violation" |
-| 137/udp | open\|filtered | netbios-ns | — |
-| 1900/udp | open\|filtered | upnp | — |
-| 3702/udp | open\|filtered | ws-discovery | — |
-| 4500/udp | open\|filtered | nat-t-ike | — |
-| 5353/udp | open\|filtered | zeroconf | — |
-| 5355/udp | open\|filtered | llmnr | — |
+| 137/udp | open\|filtered | netbios-ns | - |
+| 1900/udp | open\|filtered | upnp | - |
+| 3702/udp | open\|filtered | ws-discovery | - |
+| 4500/udp | open\|filtered | nat-t-ike | - |
+| 5353/udp | open\|filtered | zeroconf | - |
+| 5355/udp | open\|filtered | llmnr | - |
 
 <details>
 <summary>📄 Extended host script results (qscan, firewalk, smb-protocols, etc.)</summary>
@@ -599,12 +598,12 @@ Topology tab → Legend enabled → exported as PDF.
 | 7 | Real employee/organizational emails discoverable | PM3 (Maltego), PM4 (theHarvester) | Phishing & social engineering entry point | 🟠 Medium |
 | 8 | Massive subdomain footprint discoverable via free tools | PM4 (theHarvester on microsoft.com) | Demonstrates attack-surface scale even for mature orgs | 🟡 Low (illustrative) |
 | 9 | GHDB shows widespread 3rd-party misconfigurations | PM2 | Reinforces need for self-auditing via dorking | 🟡 Low (illustrative) |
-| 10 | **Gateway exposes VMware Auth Daemon (902/912/tcp)** | PM5 (Nmap) | Suggests hypervisor mgmt interface reachable from general LAN | 🟠 Medium |
-| 11 | **TFTP (69/udp) open** | PM5 (Nmap) | TFTP has no built-in authentication — file read/write risk if misconfigured | 🔴 High |
-| 12 | 3 unidentified open services (9080, 19780, 49152/tcp) | PM5 (Nmap) | Unknown attack surface pending manual investigation | 🟠 Medium |
-| 13 | SMB message signing enforced | PM5 (Nmap) | ✅ Positive control — mitigates SMB relay attacks | 🟢 Info (Good) |
-| 14 | No reverse DNS (PTR) record for gateway | PM5 (Nmap `fcrdns`) | Minor — complicates legitimate network troubleshooting/logging | 🟢 Low |
-| 15 | Multiple live hosts confirmed on lab subnet | PM5 (Nmap) | Expected/by-design — validates lab architecture (not a real finding) | 🟢 Info |
+| 10 | **Gateway exposes VMware Auth Daemon (902/912/tcp)** | PM5 (Zenmap) | Suggests hypervisor mgmt interface reachable from general LAN | 🟠 Medium |
+| 11 | **TFTP (69/udp) open** | PM5 (Zenmap) | TFTP has no built-in authentication - file read/write risk if misconfigured | 🔴 High |
+| 12 | 3 unidentified open services (9080, 19780, 49152/tcp) | PM5 (Zenmap) | Unknown attack surface pending manual investigation | 🟠 Medium |
+| 13 | SMB message signing enforced | PM5 (Zenmap) | ✅ Positive control - mitigates SMB relay attacks | 🟢 Info (Good) |
+| 14 | No reverse DNS (PTR) record for gateway | PM5 (Zenmap `fcrdns`) | Minor - complicates legitimate network troubleshooting/logging | 🟢 Low |
+| 15 | Multiple live hosts confirmed on lab subnet | PM5 (Zenmap) | Expected/by-design - validates lab architecture (not a real finding) | 🟢 Info |
 
 ---
 
@@ -614,26 +613,26 @@ Topology tab → Legend enabled → exported as PDF.
 2. Strip/minimize identifying HTTP headers (`server`, cache-layer banners) where feasible without breaking functionality.
 3. **Disable open DNS recursion** on the authoritative name servers unless explicitly required for a documented purpose.
 4. Run GHDB/Google-dork audits against your **own** domain quarterly to catch accidental indexing before attackers do.
-5. Maintain the WAF, but don't rely on it alone — layer it with rate-limiting and input validation at the application level.
+5. Maintain the WAF but don't rely on it alone - layer it with rate-limiting and input validation at the application level.
 6. Run phishing-awareness training for staff given the ease of harvesting real organizational email addresses.
 7. Prefer role-based aliases (`info@`, `support@`) over exposing individual employee emails in public-facing metadata.
-8. **Restrict the VMware Authentication Daemon ports (902/912)** to a dedicated management VLAN — they should not be reachable from the general LAN segment.
+8. **Restrict the VMware Authentication Daemon ports (902/912)** to a dedicated management VLAN - they should not be reachable from the general LAN segment.
 9. **Disable TFTP (69/udp)** unless a documented business need exists; if required, restrict source IPs via firewall rules.
 10. Investigate and document the 3 unidentified open services (9080, 19780, 49152) to confirm they are legitimate and intended.
-11. Continue enforcing SMB signing across all hosts — this control is already working correctly.
+11. Continue enforcing SMB signing across all hosts - this control is already working correctly.
 12. Institutionalize periodic authorized internal scans (as performed in PM5) to maintain an accurate, drift-free asset inventory.
-13. Always document written authorization/scope **before** any active scanning — a practice followed throughout this engagement and worth carrying into every future one.
+13. Always document written authorization/scope **before** any active scanning - a practice followed throughout this engagement and worth carrying into every future one.
 
 ---
 
 ## Key Takeaways
 
-- **Information minimization matters** — WHOIS, DNS, and Google indexing collectively build a surprisingly complete external profile of an organization with zero direct contact.
-- **Passive ≠ harmless** — GHDB, Maltego, and theHarvester are nearly impossible to detect, yet they can surface real emails, subdomains, and misconfigurations at massive scale.
-- **Active scanning is a different risk category** — Nmap/Zenmap is detectable and, unlike everything else in this engagement, requires explicit authorization every single time.
-- **Lab validation is real engineering, not just following steps** — the Week 1 NAT Network was designed to hold exactly `10.0.0.1` (gateway) and `10.0.0.2` (Kali) with `10.0.0.3–99` reserved for future targets. PM5's ping scan found **precisely** that — proof the architecture holds up under actual tool usage, not just on paper.
-- **Defenders should think like attackers** — every tool used here (WHOIS through Nmap) is equally useful for an organization auditing its *own* exposure.
-- **Documentation is the deliverable** — raw tool output means nothing without risk context, evidence, and remediation guidance attached to it.
+- **Information minimization matters** - WHOIS, DNS, and Google indexing collectively build a surprisingly complete external profile of an organization with zero direct contact.
+- **Passive ≠ harmless** - GHDB, Maltego and theHarvester are nearly impossible to detect yet they can surface real emails, subdomains and misconfigurations at massive scale.
+- **Active scanning is a different risk category** - Zenmap is detectable and unlike everything else in this engagement requires explicit authorization every single time.
+- **Lab validation is real engineering, not just following steps** - the Week 1 NAT Network was designed to hold exactly `10.0.0.1` (gateway) and `10.0.0.2` (Kali) with `10.0.0.3–99` reserved for future targets. PM5's ping scan found **precisely** that - proof the architecture holds up under actual tool usage not just on paper.
+- **Defenders should think like attackers** - every tool used here (WHOIS through Nmap) is equally useful for an organization auditing its *own* exposure.
+- **Documentation is the deliverable** - raw tool output means nothing without risk context, evidence, and remediation guidance attached to it.
 
 ---
 
@@ -654,6 +653,6 @@ Topology tab → Legend enabled → exported as PDF.
 
 ## Creator
 
-Built and documented by **Pratyay Chandra** — Batch B083F, Networkwalks Cybersecurity Program.
+Built and documented by **Pratyay Chandra**
 
 🔗 Week 1 Repository: [NETWORKWALKS-B083F-WK1-PM1-CYBERSECURITY-LAB-SETUP](https://github.com/pratyaychandra/NETWORKWALKS-B083F-WK1-PM1-CYBERSECURITY-LAB-SETUP)
