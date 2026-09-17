@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ Week 2 — Footprinting & Network Scanning
+# 🛡️ Week 2 - Footprinting & Network Scanning
 
 **From Passive OSINT to Active Internal Discovery - A Full Reconnaissance Engagement**
 
