@@ -68,7 +68,7 @@
 > - **PM4 (theHarvester)** was pointed at `microsoft.com` purely as a **passive OSINT aggregation exercise**. No requests were ever sent to Microsoft's own infrastructure - theHarvester only queries third-party public sources (search engines, certificate transparency logs, breach-notification indexes). This does not constitute testing of Microsoft's systems.
 > - **PM5 (Nmap/Zenmap)** is the only *active-scanning* component of this project, and it was run exclusively against `10.0.0.0/24` - the private, self owned NAT Network built and documented in Week 1. No host outside my own lab was scanned.
 >
-> I am solely responsible for keeping all activity shown here within these boundaries. Replicating active scanning or intrusive techniques from this repo against any system you do not own or have **written permission** to test is illegal in most jurisdictions and is explicitly discouraged.
+> Replicating active scanning or intrusive techniques from this repo against any system you do not own or have **written permission** to test is illegal in most jurisdictions and is explicitly discouraged.
 
 ---
 
