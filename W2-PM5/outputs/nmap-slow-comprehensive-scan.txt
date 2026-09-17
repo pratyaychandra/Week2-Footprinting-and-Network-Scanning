@@ -1,0 +1,618 @@
+cmd - "nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" 10.0.0.0/24"
+
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-09-16 15:35 +0530
+NSE: Loaded 303 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:35
+NSE: [shodan-api] Error: Please specify your ShodanAPI key with the shodan-api.apikey argument
+NSE: [mtrace] A source IP must be provided through fromip argument.
+No profinet devices in the subnet
+Completed NSE at 15:35, 10.50s elapsed
+Initiating NSE at 15:35
+Completed NSE at 15:35, 0.00s elapsed
+Initiating NSE at 15:35
+Completed NSE at 15:35, 0.00s elapsed
+Pre-scan script results:
+| targets-sniffer: Sniffed 4 address(es). 
+| 224.0.0.1
+| 10.0.0.1
+| 224.0.0.13
+|_224.0.23.12
+|_http-robtex-shared-ns: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+|_hostmap-robtex: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+Initiating ARP Ping Scan at 15:35
+Scanning 255 hosts [1 port/host]
+Completed ARP Ping Scan at 15:35, 1.84s elapsed (255 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:35
+Completed Parallel DNS resolution of 1 host. at 15:35, 0.50s elapsed
+Nmap scan report for 10.0.0.0 [host down]
+Nmap scan report for 10.0.0.3 [host down]
+Nmap scan report for 10.0.0.4 [host down]
+Nmap scan report for 10.0.0.5 [host down]
+Nmap scan report for 10.0.0.6 [host down]
+Nmap scan report for 10.0.0.7 [host down]
+Nmap scan report for 10.0.0.8 [host down]
+Nmap scan report for 10.0.0.9 [host down]
+Nmap scan report for 10.0.0.10 [host down]
+Nmap scan report for 10.0.0.11 [host down]
+Nmap scan report for 10.0.0.12 [host down]
+Nmap scan report for 10.0.0.13 [host down]
+Nmap scan report for 10.0.0.14 [host down]
+Nmap scan report for 10.0.0.15 [host down]
+Nmap scan report for 10.0.0.16 [host down]
+Nmap scan report for 10.0.0.17 [host down]
+Nmap scan report for 10.0.0.18 [host down]
+Nmap scan report for 10.0.0.19 [host down]
+Nmap scan report for 10.0.0.20 [host down]
+Nmap scan report for 10.0.0.21 [host down]
+Nmap scan report for 10.0.0.22 [host down]
+Nmap scan report for 10.0.0.23 [host down]
+Nmap scan report for 10.0.0.24 [host down]
+Nmap scan report for 10.0.0.25 [host down]
+Nmap scan report for 10.0.0.26 [host down]
+Nmap scan report for 10.0.0.27 [host down]
+Nmap scan report for 10.0.0.28 [host down]
+Nmap scan report for 10.0.0.29 [host down]
+Nmap scan report for 10.0.0.30 [host down]
+Nmap scan report for 10.0.0.31 [host down]
+Nmap scan report for 10.0.0.32 [host down]
+Nmap scan report for 10.0.0.33 [host down]
+Nmap scan report for 10.0.0.34 [host down]
+Nmap scan report for 10.0.0.35 [host down]
+Nmap scan report for 10.0.0.36 [host down]
+Nmap scan report for 10.0.0.37 [host down]
+Nmap scan report for 10.0.0.38 [host down]
+Nmap scan report for 10.0.0.39 [host down]
+Nmap scan report for 10.0.0.40 [host down]
+Nmap scan report for 10.0.0.41 [host down]
+Nmap scan report for 10.0.0.42 [host down]
+Nmap scan report for 10.0.0.43 [host down]
+Nmap scan report for 10.0.0.44 [host down]
+Nmap scan report for 10.0.0.45 [host down]
+Nmap scan report for 10.0.0.46 [host down]
+Nmap scan report for 10.0.0.47 [host down]
+Nmap scan report for 10.0.0.48 [host down]
+Nmap scan report for 10.0.0.49 [host down]
+Nmap scan report for 10.0.0.50 [host down]
+Nmap scan report for 10.0.0.51 [host down]
+Nmap scan report for 10.0.0.52 [host down]
+Nmap scan report for 10.0.0.53 [host down]
+Nmap scan report for 10.0.0.54 [host down]
+Nmap scan report for 10.0.0.55 [host down]
+Nmap scan report for 10.0.0.56 [host down]
+Nmap scan report for 10.0.0.57 [host down]
+Nmap scan report for 10.0.0.58 [host down]
+Nmap scan report for 10.0.0.59 [host down]
+Nmap scan report for 10.0.0.60 [host down]
+Nmap scan report for 10.0.0.61 [host down]
+Nmap scan report for 10.0.0.62 [host down]
+Nmap scan report for 10.0.0.63 [host down]
+Nmap scan report for 10.0.0.64 [host down]
+Nmap scan report for 10.0.0.65 [host down]
+Nmap scan report for 10.0.0.66 [host down]
+Nmap scan report for 10.0.0.67 [host down]
+Nmap scan report for 10.0.0.68 [host down]
+Nmap scan report for 10.0.0.69 [host down]
+Nmap scan report for 10.0.0.70 [host down]
+Nmap scan report for 10.0.0.71 [host down]
+Nmap scan report for 10.0.0.72 [host down]
+Nmap scan report for 10.0.0.73 [host down]
+Nmap scan report for 10.0.0.74 [host down]
+Nmap scan report for 10.0.0.75 [host down]
+Nmap scan report for 10.0.0.76 [host down]
+Nmap scan report for 10.0.0.77 [host down]
+Nmap scan report for 10.0.0.78 [host down]
+Nmap scan report for 10.0.0.79 [host down]
+Nmap scan report for 10.0.0.80 [host down]
+Nmap scan report for 10.0.0.81 [host down]
+Nmap scan report for 10.0.0.82 [host down]
+Nmap scan report for 10.0.0.83 [host down]
+Nmap scan report for 10.0.0.84 [host down]
+Nmap scan report for 10.0.0.85 [host down]
+Nmap scan report for 10.0.0.86 [host down]
+Nmap scan report for 10.0.0.87 [host down]
+Nmap scan report for 10.0.0.88 [host down]
+Nmap scan report for 10.0.0.89 [host down]
+Nmap scan report for 10.0.0.90 [host down]
+Nmap scan report for 10.0.0.91 [host down]
+Nmap scan report for 10.0.0.92 [host down]
+Nmap scan report for 10.0.0.93 [host down]
+Nmap scan report for 10.0.0.94 [host down]
+Nmap scan report for 10.0.0.95 [host down]
+Nmap scan report for 10.0.0.96 [host down]
+Nmap scan report for 10.0.0.97 [host down]
+Nmap scan report for 10.0.0.98 [host down]
+Nmap scan report for 10.0.0.99 [host down]
+Nmap scan report for 10.0.0.100 [host down]
+Nmap scan report for 10.0.0.101 [host down]
+Nmap scan report for 10.0.0.102 [host down]
+Nmap scan report for 10.0.0.103 [host down]
+Nmap scan report for 10.0.0.104 [host down]
+Nmap scan report for 10.0.0.105 [host down]
+Nmap scan report for 10.0.0.106 [host down]
+Nmap scan report for 10.0.0.107 [host down]
+Nmap scan report for 10.0.0.108 [host down]
+Nmap scan report for 10.0.0.109 [host down]
+Nmap scan report for 10.0.0.110 [host down]
+Nmap scan report for 10.0.0.111 [host down]
+Nmap scan report for 10.0.0.112 [host down]
+Nmap scan report for 10.0.0.113 [host down]
+Nmap scan report for 10.0.0.114 [host down]
+Nmap scan report for 10.0.0.115 [host down]
+Nmap scan report for 10.0.0.116 [host down]
+Nmap scan report for 10.0.0.117 [host down]
+Nmap scan report for 10.0.0.118 [host down]
+Nmap scan report for 10.0.0.119 [host down]
+Nmap scan report for 10.0.0.120 [host down]
+Nmap scan report for 10.0.0.121 [host down]
+Nmap scan report for 10.0.0.122 [host down]
+Nmap scan report for 10.0.0.123 [host down]
+Nmap scan report for 10.0.0.124 [host down]
+Nmap scan report for 10.0.0.125 [host down]
+Nmap scan report for 10.0.0.126 [host down]
+Nmap scan report for 10.0.0.127 [host down]
+Nmap scan report for 10.0.0.128 [host down]
+Nmap scan report for 10.0.0.129 [host down]
+Nmap scan report for 10.0.0.130 [host down]
+Nmap scan report for 10.0.0.131 [host down]
+Nmap scan report for 10.0.0.132 [host down]
+Nmap scan report for 10.0.0.133 [host down]
+Nmap scan report for 10.0.0.134 [host down]
+Nmap scan report for 10.0.0.135 [host down]
+Nmap scan report for 10.0.0.136 [host down]
+Nmap scan report for 10.0.0.137 [host down]
+Nmap scan report for 10.0.0.138 [host down]
+Nmap scan report for 10.0.0.139 [host down]
+Nmap scan report for 10.0.0.140 [host down]
+Nmap scan report for 10.0.0.141 [host down]
+Nmap scan report for 10.0.0.142 [host down]
+Nmap scan report for 10.0.0.143 [host down]
+Nmap scan report for 10.0.0.144 [host down]
+Nmap scan report for 10.0.0.145 [host down]
+Nmap scan report for 10.0.0.146 [host down]
+Nmap scan report for 10.0.0.147 [host down]
+Nmap scan report for 10.0.0.148 [host down]
+Nmap scan report for 10.0.0.149 [host down]
+Nmap scan report for 10.0.0.150 [host down]
+Nmap scan report for 10.0.0.151 [host down]
+Nmap scan report for 10.0.0.152 [host down]
+Nmap scan report for 10.0.0.153 [host down]
+Nmap scan report for 10.0.0.154 [host down]
+Nmap scan report for 10.0.0.155 [host down]
+Nmap scan report for 10.0.0.156 [host down]
+Nmap scan report for 10.0.0.157 [host down]
+Nmap scan report for 10.0.0.158 [host down]
+Nmap scan report for 10.0.0.159 [host down]
+Nmap scan report for 10.0.0.160 [host down]
+Nmap scan report for 10.0.0.161 [host down]
+Nmap scan report for 10.0.0.162 [host down]
+Nmap scan report for 10.0.0.163 [host down]
+Nmap scan report for 10.0.0.164 [host down]
+Nmap scan report for 10.0.0.165 [host down]
+Nmap scan report for 10.0.0.166 [host down]
+Nmap scan report for 10.0.0.167 [host down]
+Nmap scan report for 10.0.0.168 [host down]
+Nmap scan report for 10.0.0.169 [host down]
+Nmap scan report for 10.0.0.170 [host down]
+Nmap scan report for 10.0.0.171 [host down]
+Nmap scan report for 10.0.0.172 [host down]
+Nmap scan report for 10.0.0.173 [host down]
+Nmap scan report for 10.0.0.174 [host down]
+Nmap scan report for 10.0.0.175 [host down]
+Nmap scan report for 10.0.0.176 [host down]
+Nmap scan report for 10.0.0.177 [host down]
+Nmap scan report for 10.0.0.178 [host down]
+Nmap scan report for 10.0.0.179 [host down]
+Nmap scan report for 10.0.0.180 [host down]
+Nmap scan report for 10.0.0.181 [host down]
+Nmap scan report for 10.0.0.182 [host down]
+Nmap scan report for 10.0.0.183 [host down]
+Nmap scan report for 10.0.0.184 [host down]
+Nmap scan report for 10.0.0.185 [host down]
+Nmap scan report for 10.0.0.186 [host down]
+Nmap scan report for 10.0.0.187 [host down]
+Nmap scan report for 10.0.0.188 [host down]
+Nmap scan report for 10.0.0.189 [host down]
+Nmap scan report for 10.0.0.190 [host down]
+Nmap scan report for 10.0.0.191 [host down]
+Nmap scan report for 10.0.0.192 [host down]
+Nmap scan report for 10.0.0.193 [host down]
+Nmap scan report for 10.0.0.194 [host down]
+Nmap scan report for 10.0.0.195 [host down]
+Nmap scan report for 10.0.0.196 [host down]
+Nmap scan report for 10.0.0.197 [host down]
+Nmap scan report for 10.0.0.198 [host down]
+Nmap scan report for 10.0.0.199 [host down]
+Nmap scan report for 10.0.0.200 [host down]
+Nmap scan report for 10.0.0.201 [host down]
+Nmap scan report for 10.0.0.202 [host down]
+Nmap scan report for 10.0.0.203 [host down]
+Nmap scan report for 10.0.0.204 [host down]
+Nmap scan report for 10.0.0.205 [host down]
+Nmap scan report for 10.0.0.206 [host down]
+Nmap scan report for 10.0.0.207 [host down]
+Nmap scan report for 10.0.0.208 [host down]
+Nmap scan report for 10.0.0.209 [host down]
+Nmap scan report for 10.0.0.210 [host down]
+Nmap scan report for 10.0.0.211 [host down]
+Nmap scan report for 10.0.0.212 [host down]
+Nmap scan report for 10.0.0.213 [host down]
+Nmap scan report for 10.0.0.214 [host down]
+Nmap scan report for 10.0.0.215 [host down]
+Nmap scan report for 10.0.0.216 [host down]
+Nmap scan report for 10.0.0.217 [host down]
+Nmap scan report for 10.0.0.218 [host down]
+Nmap scan report for 10.0.0.219 [host down]
+Nmap scan report for 10.0.0.220 [host down]
+Nmap scan report for 10.0.0.221 [host down]
+Nmap scan report for 10.0.0.222 [host down]
+Nmap scan report for 10.0.0.223 [host down]
+Nmap scan report for 10.0.0.224 [host down]
+Nmap scan report for 10.0.0.225 [host down]
+Nmap scan report for 10.0.0.226 [host down]
+Nmap scan report for 10.0.0.227 [host down]
+Nmap scan report for 10.0.0.228 [host down]
+Nmap scan report for 10.0.0.229 [host down]
+Nmap scan report for 10.0.0.230 [host down]
+Nmap scan report for 10.0.0.231 [host down]
+Nmap scan report for 10.0.0.232 [host down]
+Nmap scan report for 10.0.0.233 [host down]
+Nmap scan report for 10.0.0.234 [host down]
+Nmap scan report for 10.0.0.235 [host down]
+Nmap scan report for 10.0.0.236 [host down]
+Nmap scan report for 10.0.0.237 [host down]
+Nmap scan report for 10.0.0.238 [host down]
+Nmap scan report for 10.0.0.239 [host down]
+Nmap scan report for 10.0.0.240 [host down]
+Nmap scan report for 10.0.0.241 [host down]
+Nmap scan report for 10.0.0.242 [host down]
+Nmap scan report for 10.0.0.243 [host down]
+Nmap scan report for 10.0.0.244 [host down]
+Nmap scan report for 10.0.0.245 [host down]
+Nmap scan report for 10.0.0.246 [host down]
+Nmap scan report for 10.0.0.247 [host down]
+Nmap scan report for 10.0.0.248 [host down]
+Nmap scan report for 10.0.0.249 [host down]
+Nmap scan report for 10.0.0.250 [host down]
+Nmap scan report for 10.0.0.251 [host down]
+Nmap scan report for 10.0.0.252 [host down]
+Nmap scan report for 10.0.0.253 [host down]
+Nmap scan report for 10.0.0.254 [host down]
+Nmap scan report for 10.0.0.255 [host down]
+Initiating Parallel DNS resolution of 1 host. at 15:35
+Completed Parallel DNS resolution of 1 host. at 15:35, 0.50s elapsed
+Initiating SYN Stealth Scan at 15:35
+Scanning 10.0.0.1 [1000 ports]
+Discovered open port 135/tcp on 10.0.0.1
+Discovered open port 445/tcp on 10.0.0.1
+Discovered open port 912/tcp on 10.0.0.1
+Discovered open port 19780/tcp on 10.0.0.1
+Discovered open port 49152/tcp on 10.0.0.1
+Discovered open port 902/tcp on 10.0.0.1
+Discovered open port 1001/tcp on 10.0.0.1
+Discovered open port 9080/tcp on 10.0.0.1
+Discovered open port 5357/tcp on 10.0.0.1
+Completed SYN Stealth Scan at 15:35, 4.08s elapsed (1000 total ports)
+Initiating UDP Scan at 15:35
+Scanning 10.0.0.1 [1000 ports]
+adjust_timeouts2: packet supposedly had rtt of 9097623 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9097623 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9100590 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9100590 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9952719 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9952719 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9956475 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9956475 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9963732 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9963732 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9965947 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9965947 microseconds.  Ignoring time.
+Increasing send delay for 10.0.0.1 from 0 to 50 due to 55 out of 136 dropped probes since last increase.
+Increasing send delay for 10.0.0.1 from 50 to 100 due to max_successful_tryno increase to 5
+Increasing send delay for 10.0.0.1 from 100 to 200 due to max_successful_tryno increase to 6
+Increasing send delay for 10.0.0.1 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Warning: 10.0.0.1 giving up on port because retransmission cap hit (6).
+UDP Scan Timing: About 18.16% done; ETC: 15:38 (0:02:20 remaining)
+UDP Scan Timing: About 24.96% done; ETC: 15:39 (0:03:03 remaining)
+Discovered open port 69/udp on 10.0.0.1
+UDP Scan Timing: About 31.14% done; ETC: 15:40 (0:03:21 remaining)
+UDP Scan Timing: About 43.86% done; ETC: 15:41 (0:03:06 remaining)
+UDP Scan Timing: About 51.36% done; ETC: 15:41 (0:02:49 remaining)
+UDP Scan Timing: About 58.86% done; ETC: 15:41 (0:02:25 remaining)
+UDP Scan Timing: About 66.26% done; ETC: 15:41 (0:02:01 remaining)
+UDP Scan Timing: About 73.06% done; ETC: 15:41 (0:01:39 remaining)
+UDP Scan Timing: About 80.56% done; ETC: 15:41 (0:01:12 remaining)
+UDP Scan Timing: About 88.06% done; ETC: 15:41 (0:00:44 remaining)
+Completed UDP Scan at 15:42, 382.66s elapsed (1000 total ports)
+Initiating Service scan at 15:42
+Scanning 17 services on 10.0.0.1
+Service scan Timing: About 47.06% done; ETC: 15:45 (0:01:37 remaining)
+Completed Service scan at 15:44, 123.71s elapsed (17 services on 1 host)
+Initiating OS detection (try #1) against 10.0.0.1
+Retrying OS detection (try #2) against 10.0.0.1
+NSE: Script scanning 10.0.0.1.
+Initiating NSE at 15:44
+NSE: [ip-forwarding] Required argument ip-forwarding.target not given
+Completed NSE at 15:45, 64.66s elapsed
+Initiating NSE at 15:45
+Completed NSE at 15:45, 1.06s elapsed
+Initiating NSE at 15:45
+Completed NSE at 15:45, 0.01s elapsed
+Nmap scan report for 10.0.0.1
+Host is up (0.00072s latency).
+Not shown: 992 closed udp ports (port-unreach), 991 filtered tcp ports (no-response)
+Bug in http-security-headers: no string output.
+PORT      STATE         SERVICE         VERSION
+135/tcp   open          msrpc           Microsoft Windows RPC
+445/tcp   open          microsoft-ds?
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+902/tcp   open          ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+| banner: 220 VMware Authentication Daemon Version 1.10: SSL Required, Se
+|_rverDaemonProtocol:SOAP, MKSDisplayProtocol:VNC , , NFCSSL supported/t,
+912/tcp   open          vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+| banner: 220 VMware Authentication Daemon Version 1.0, ServerDaemonProto
+|_col:SOAP, MKSDisplayProtocol:VNC , , ,
+1001/tcp  open          webpush?
+5357/tcp  open          http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-traceroute: 
+|_  Possible reverse proxy detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-date: Wed, 16 Sep 2026 10:14:10 GMT; -2s from local time.
+| http-useragent-tester: 
+|   Status for browser useragent: 503
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-title: Service Unavailable
+|_http-server-header: Microsoft-HTTPAPI/2.0
+| http-headers: 
+|   Content-Type: text/html; charset=us-ascii
+|   Server: Microsoft-HTTPAPI/2.0
+|   Date: Wed, 16 Sep 2026 10:14:11 GMT
+|   Connection: close
+|   Content-Length: 326
+|   
+|_  (Request type: GET)
+|_http-xssed: No previously reported XSS vuln.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-comments-displayer: Couldn't find any comments.
+9080/tcp  open          glrpc?
+| fingerprint-strings: 
+|   FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, RTSPRequest, SIPOptions: 
+|     HTTP/1.1 301 Moved Permanently
+|     Location: about:blank
+|_    Connection: close
+19780/tcp open          unknown
+| fingerprint-strings: 
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Connection: close
+|     Date: Wed, 16 Sep 2026 10:12:07 GMT
+|     Content-Length: 93
+|     <html><head><title>400 Bad Request</title></head><body><h1>400 Bad Request</h1></body></html>
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: application/json
+|     {"error":"Not found","ok":false}
+|   HTTPOptions: 
+|     HTTP/1.1 501 Not Implemented
+|     Content-Type: text/html
+|     Connection: close
+|     Date: Wed, 16 Sep 2026 10:12:08 GMT
+|     Content-Length: 101
+|     <html><head><title>501 Not Implemented</title></head><body><h1>501 Not Implemented</h1></body></html>
+|   Help, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Connection: close
+|     Date: Wed, 16 Sep 2026 10:12:23 GMT
+|     Content-Length: 93
+|     <html><head><title>400 Bad Request</title></head><body><h1>400 Bad Request</h1></body></html>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Connection: close
+|     Date: Wed, 16 Sep 2026 10:12:08 GMT
+|     Content-Length: 93
+|_    <html><head><title>400 Bad Request</title></head><body><h1>400 Bad Request</h1></body></html>
+49152/tcp open          unknown
+67/udp    open|filtered dhcps
+69/udp    open          tftp
+| fingerprint-strings: 
+|   xdmcp: 
+|_    Access violation
+137/udp   open|filtered netbios-ns
+1900/udp  open|filtered upnp
+3702/udp  open|filtered ws-discovery
+| wsdd-discover: 
+|   Devices
+|     Message id: 186c8e41-59c3-461d-a5c6-d3131c1421a2
+|     Address: http://127.0.0.1:5357/88afa9de-080a-464e-8fa8-7f8a3e5b84d1/
+|_    Type: Device pub:Computer
+4500/udp  open|filtered nat-t-ike
+5353/udp  open|filtered zeroconf
+5355/udp  open|filtered llmnr
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9080-TCP:V=7.99%I=7%D=9/16%Time=6AAA6B79%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,47,"HTTP/1\.1\x20301\x20Moved\x20Permanently\nLocation:\x20abo
+SF:ut:blank\nConnection:\x20close\n")%r(GenericLines,47,"HTTP/1\.1\x20301\
+SF:x20Moved\x20Permanently\nLocation:\x20about:blank\nConnection:\x20close
+SF:\n")%r(HTTPOptions,47,"HTTP/1\.1\x20301\x20Moved\x20Permanently\nLocati
+SF:on:\x20about:blank\nConnection:\x20close\n")%r(RTSPRequest,47,"HTTP/1\.
+SF:1\x20301\x20Moved\x20Permanently\nLocation:\x20about:blank\nConnection:
+SF:\x20close\n")%r(FourOhFourRequest,47,"HTTP/1\.1\x20301\x20Moved\x20Perm
+SF:anently\nLocation:\x20about:blank\nConnection:\x20close\n")%r(SIPOption
+SF:s,47,"HTTP/1\.1\x20301\x20Moved\x20Permanently\nLocation:\x20about:blan
+SF:k\nConnection:\x20close\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port19780-TCP:V=7.99%I=7%D=9/16%Time=6AAA6B79%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,DE,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20
+SF:text/html\r\nConnection:\x20close\r\nDate:\x20Wed,\x2016\x20Sep\x202026
+SF:\x2010:12:07\x20GMT\r\nContent-Length:\x2093\r\n\r\n<html><head><title>
+SF:400\x20Bad\x20Request</title></head><body><h1>400\x20Bad\x20Request</h1
+SF:></body></html>")%r(GetRequest,5A,"HTTP/1\.0\x20404\x20Not\x20Found\r\n
+SF:Content-Type:\x20application/json\r\n\r\n{\"error\":\"Not\x20found\",\"
+SF:ok\":false}")%r(HTTPOptions,EB,"HTTP/1\.1\x20501\x20Not\x20Implemented\
+SF:r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\nDate:\x20Wed,\
+SF:x2016\x20Sep\x202026\x2010:12:08\x20GMT\r\nContent-Length:\x20101\r\n\r
+SF:\n<html><head><title>501\x20Not\x20Implemented</title></head><body><h1>
+SF:501\x20Not\x20Implemented</h1></body></html>")%r(RTSPRequest,DE,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nConnectio
+SF:n:\x20close\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2010:12:08\x20GMT\r\
+SF:nContent-Length:\x2093\r\n\r\n<html><head><title>400\x20Bad\x20Request<
+SF:/title></head><body><h1>400\x20Bad\x20Request</h1></body></html>")%r(He
+SF:lp,DE,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html
+SF:\r\nConnection:\x20close\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2010:12
+SF::23\x20GMT\r\nContent-Length:\x2093\r\n\r\n<html><head><title>400\x20Ba
+SF:d\x20Request</title></head><body><h1>400\x20Bad\x20Request</h1></body><
+SF:/html>")%r(SSLSessionReq,DE,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCont
+SF:ent-Type:\x20text/html\r\nConnection:\x20close\r\nDate:\x20Wed,\x2016\x
+SF:20Sep\x202026\x2010:12:23\x20GMT\r\nContent-Length:\x2093\r\n\r\n<html>
+SF:<head><title>400\x20Bad\x20Request</title></head><body><h1>400\x20Bad\x
+SF:20Request</h1></body></html>")%r(TerminalServerCookie,DE,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nConnection:\x20c
+SF:lose\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2010:12:23\x20GMT\r\nConten
+SF:t-Length:\x2093\r\n\r\n<html><head><title>400\x20Bad\x20Request</title>
+SF:</head><body><h1>400\x20Bad\x20Request</h1></body></html>")%r(TLSSessio
+SF:nReq,DE,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/ht
+SF:ml\r\nConnection:\x20close\r\nDate:\x20Wed,\x2016\x20Sep\x202026\x2010:
+SF:12:23\x20GMT\r\nContent-Length:\x2093\r\n\r\n<html><head><title>400\x20
+SF:Bad\x20Request</title></head><body><h1>400\x20Bad\x20Request</h1></body
+SF:></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port69-UDP:V=7.99%I=7%D=9/16%Time=6AAA6B7D%P=x86_64-pc-linux-gnu%r(xdmc
+SF:p,15,"\0\x05\0\x02Access\x20violation\0");
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: VoIP adapter|bridge|general purpose|printer|switch
+Running (JUST GUESSING): AT&T embedded (95%), Oracle Virtualbox (90%), Slirp (90%), QEMU (89%), HP embedded (86%), Minolta embedded (85%), NEC embedded (85%), Cisco embedded (85%)
+OS CPE: cpe:/a:oracle:vm_virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu cpe:/h:cisco:sg_500
+Aggressive OS guesses: AT&T BGW210 voice gateway (95%), Oracle Virtualbox Slirp NAT bridge (90%), QEMU user mode network gateway (89%), HP 9100c Digital Sender printer (J3113A) (86%), Minolta Di550 laser printer (85%), NEC SuperScript printer (85%), Cisco SG 500 switch (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=17 (Good luck!)
+IP ID Sequence Generation: Randomized
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2026-09-16T10:14:18
+|_  start_date: N/A
+| qscan: 
+| PORT   FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 135    0       1233.10    335.59  0.0%
+| 445    0       1255.40    197.74  0.0%
+| 902    0       1247.30    266.18  0.0%
+| 912    0       1153.50    124.35  0.0%
+| 1001   0       1184.20    153.84  0.0%
+| 5357   0       1260.00    233.91  0.0%
+| 9080   0       1143.90    140.91  0.0%
+|_19780  0       1222.40    227.02  0.0%
+|_clock-skew: mean: -2s, deviation: 0s, median: -2s
+|_path-mtu: PMTU == 1500
+| smb-protocols: 
+|   dialects: 
+|     2.0.2
+|     2.1
+|     3.0
+|     3.0.2
+|_    3.1.1
+|_ipidseq: Randomized
+|_msrpc-enum: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+| traceroute-geolocation: 
+|   HOP  RTT   ADDRESS   GEOLOCATION
+|_  1    0.73  10.0.0.1  - ,- 
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+| firewalk: 
+| HOP  HOST      PROTOCOL  BLOCKED PORTS
+| 0    10.0.0.2  tcp       1,3-4,6-7,9,13,17,19-20
+|                udp       67
+|_1    10.0.0.1  udp       137,1900,3702,4500,5353,5355
+| smb2-capabilities: 
+|   2.0.2: 
+|     Distributed File System
+|   2.1: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.0: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.0.2: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.1.1: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+|_fcrdns: FAIL (No PTR record)
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.73 ms 10.0.0.1
+
+Initiating SYN Stealth Scan at 15:45
+Scanning 10.0.0.2 [1000 ports]
+SYN Stealth Scan Timing: About 29.50% done; ETC: 15:47 (0:01:14 remaining)
+SYN Stealth Scan Timing: About 59.50% done; ETC: 15:46 (0:00:42 remaining)
+Completed SYN Stealth Scan at 15:46, 101.25s elapsed (1000 total ports)
+Initiating UDP Scan at 15:46
+Scanning 10.0.0.2 [1000 ports]
+Completed UDP Scan at 15:46, 0.03s elapsed (1000 total ports)
+Initiating Service scan at 15:46
+Initiating OS detection (try #1) against 10.0.0.2
+Retrying OS detection (try #2) against 10.0.0.2
+NSE: Script scanning 10.0.0.2.
+Initiating NSE at 15:46
+Completed NSE at 15:46, 0.12s elapsed
+Initiating NSE at 15:46
+Completed NSE at 15:46, 0.00s elapsed
+Initiating NSE at 15:46
+Completed NSE at 15:46, 0.00s elapsed
+Nmap scan report for 10.0.0.2
+Host is up (0.000019s latency).
+All 2000 scanned ports on 10.0.0.2 are in ignored states.
+Not shown: 1000 closed udp ports (port-unreach), 1000 filtered tcp ports (no-response)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+Host script results:
+|_path-mtu: ERROR: Script execution failed (use -d to debug)
+|_fcrdns: FAIL (No PTR record)
+
+NSE: Script Post-scanning.
+Initiating NSE at 15:46
+Completed NSE at 15:46, 0.00s elapsed
+Initiating NSE at 15:46
+Completed NSE at 15:46, 0.00s elapsed
+Initiating NSE at 15:46
+Completed NSE at 15:46, 0.00s elapsed
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (2 hosts up) scanned in 697.45 seconds
+           Raw packets sent: 6989 (313.390KB) | Rcvd: 6274 (347.458KB)
