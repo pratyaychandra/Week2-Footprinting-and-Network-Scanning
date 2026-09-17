@@ -44,7 +44,7 @@
 | Batch | B083F |
 | Program | Networkwalks Cybersecurity Program |
 | Task Codes | WK2-PM1, WK2-PM2, WK2-PM3, WK2-PM4, WK2-PM5, WK2-PM-FINAL |
-| Modules Completed | **6 / 6** — all 4 electives + both mandatory essentials (minimum required was 3) |
+| Modules Completed | **6 / 6** - all 4 electives + both mandatory essentials |
 | Targets | `networkwalks.com` (authorized practice domain) · `microsoft.com` (passive OSINT only) · Own Lab LAN `10.0.0.0/24` (Week 1 environment) |
 | Environment | Kali Linux 2026.2 (VirtualBox lab) + Windows 11 host |
 | Engagement Type | Reconnaissance & Footprinting → Internal Network Discovery |
