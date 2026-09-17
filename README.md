@@ -82,11 +82,11 @@ The engagement was built to:
 - Practice the *full* recon methodology a real pentester follows before ever touching exploitation
 - Compare **passive** (near-undetectable) vs. **active** (detectable) reconnaissance techniques side-by-side
 - Validate that the Week 1 lab architecture (`10.0.0.2` Kali / `10.0.0.1` gateway) behaves exactly as designed under real tool usage
-- Document findings the way a professional engagement report would — with risk ratings and remediation guidance, not just raw output
+- Document findings the way a professional engagement report would - with risk ratings and remediation guidance, not just raw output
 
 ---
 
-## Arsenal — Tools Used
+## Arsenal - Tools Used
 
 | Tool | Category | Purpose |
 |---|---|---|
@@ -248,7 +248,7 @@ server: Apache
 [~] Number of requests: 2
 ```
 
-**Result:** WAF vendor fingerprintable — informs an attacker which evasion techniques would apply, and confirms to a defender that a WAF is at least active.
+**Result:** WAF vendor fingerprintable - informs an attacker which evasion techniques would apply, and confirms to a defender that a WAF is at least active.
 
 📎 Raw file: [`wafw00f-networkwalks.txt`](./W2-PM1/outputs/wafw00f-networkwalks.txt)
 
@@ -308,7 +308,7 @@ server: Apache
 
 ### PM2 - Footprinting with GHDB (Google Hacking Database)
 
-**Method:** exploit-db.com's GHDB repository → pre-built Google Dorks → verified in live Google search. This is the most passive module in the entire engagement — no request is ever sent to a "target" server until *manually* clicking a link to confirm it's live.
+**Method:** exploit-db.com's GHDB repository → pre-built Google Dorks → verified in live Google search. This is the most passive module in the entire engagement - no request is ever sent to a "target" server until *manually* clicking a link to confirm it's live.
 
 📎 Full methodology + screenshots: [`footprinting-ghdb.docx`](./W2-PM2/footprinting-ghdb.docx)
 
@@ -342,7 +342,7 @@ server: Apache
 | 9 | https://www.maths.dur.ac.uk/papers/2025/ | same |
 | 10 | https://lira.epac.to/DOCS-TECH/Math/Engineering%20and%20Applied/ | same |
 
-**Lesson:** None of the above belong to `networkwalks.com` — they're unrelated third-party systems this exercise deliberately surfaces to demonstrate scale. Google indexes *everything* an organization fails to lock down; the same dorking technique run against your **own** domain is a free, zero-cost external-exposure audit.
+**Lesson:** None of the above belong to `networkwalks.com` - they're unrelated third-party systems this exercise deliberately surfaces to demonstrate scale. Google indexes *everything* an organization fails to lock down; the same dorking technique run against your **own** domain is a free, zero-cost external-exposure audit.
 
 ---
 
@@ -374,8 +374,6 @@ A `Domain` entity was created for `networkwalks.com`, and 4 transforms were run:
 ![Maltego Transforms Used](./W2-PM3/screenshots/maltego-transforms-used.png)
 ![Maltego Graph 1](./W2-PM3/screenshots/maltego-graph-1.png)
 ![Maltego Graph 2](./W2-PM3/screenshots/maltego-graph-2.png)
-![Maltego Graph 3](./W2-PM3/screenshots/maltego-graph-3.png)
-![Maltego Graph 4](./W2-PM3/screenshots/maltego-graph-4.png)
 
 <details>
 <summary>🖼️ Detailed entity views (5 screenshots)</summary>
@@ -390,7 +388,7 @@ A `Domain` entity was created for `networkwalks.com`, and 4 transforms were run:
 
 ![Maltego Topology](./W2-PM3/screenshots/maltego-topology.png)
 
-**Emails discovered:** `info@networkwalks.com`, `abuse@godaddy.com`
+**Emails discovered:** `info@networkwalks.com` and `abuse@godaddy.com`
 
 **Why this matters:** Each harvested email is a phishing/social-engineering entry point. Maltego's value isn't the data itself (theHarvester or manual Google searches can find the same) - it's the **visual graph** that makes relationships between entities immediately obvious to a non-technical stakeholder.
 
@@ -443,17 +441,17 @@ This query hits **27+ data sources simultaneously**. The result set was far too 
 | Emails found | 3 → `dotnet-docker-bot@microsoft.com`, `opencode@microsoft.com`, `secure@microsoft.com` |
 | **Hosts found** | **9,957 subdomains** |
 
-**Representative subdomains** (out of 9,957): `academy.microsoft.com`, `azure.microsoft.com`, `learn.microsoft.com`, `graph.microsoft.com`, plus internal-looking entries like `redmond.corp.microsoft.com` and `sys-wingroup.ntdev.corp.microsoft.com` — evidence that even a company of Microsoft's security maturity has an enormous, partially internal-facing subdomain footprint discoverable through free, passive tools.
+**Representative subdomains** (out of 9,957): `academy.microsoft.com`, `azure.microsoft.com`, `learn.microsoft.com`, `graph.microsoft.com`, plus internal-looking entries like `redmond.corp.microsoft.com` and `sys-wingroup.ntdev.corp.microsoft.com` - evidence that even a company of Microsoft's security maturity has an enormous, partially internal-facing subdomain footprint discoverable through free, passive tools.
 
 📎 Full 9,957-host raw output: [`task2-theharvester-all-sources.txt`](./W2-PM4/outputs/task2-theharvester-all-sources.txt)
 
 ---
 
-### PM5 — Network Scanning with Zenmap/Nmap
+### PM5 - Network Scanning with Zenmap/Nmap
 
 **Target:** Own Lab LAN `10.0.0.0/24` (built in Week 1) · **Baseline:** Kali = `10.0.0.2`, Gateway = `10.0.0.1`
 
-> **Methodology disclosure:** The official task requires a single Ping Scan via the Windows Zenmap GUI. As bonus effort, I additionally ran two deeper scans **directly via `nmap` CLI in the Kali terminal** rather than the Windows GUI - all three are documented below for full transparency.
+> **Methodology disclosure:** The official task requires a single Ping Scan via the Windows Zenmap GUI. As bonus effort, I additionally ran two deeper scans **directly via `zenmap` CLI in the Kali terminal** rather than the Windows GUI - all three are documented below for full transparency.
 
 ![Zenmap GUI 1](./W2-PM5/screenshots/zenmap-gui-1.png)
 ![Zenmap GUI 2 - Regular Scan](./W2-PM5/screenshots/zenmap-gui-2-regular-scan.png)
@@ -470,7 +468,7 @@ Host is up.
 Nmap done: 256 IP addresses (2 hosts up) scanned in 2.91 seconds
 ```
 
-**Result: 2 live hosts** - `10.0.0.1` (gateway) and `10.0.0.2` (Kali itself). This is the single most important validation of the whole engagement: it confirms the Week 1 NAT Network architecture works **exactly as designed**, with slots `10.0.0.3–99` sitting empty and ready for future target VMs - no drift, no rogue devices.
+**Result: 2 live hosts** - `10.0.0.1` (gateway) and `10.0.0.2` (Kali itself). This is the single most important validation of the whole engagement: it confirms the Week 1 NAT Network architecture works **exactly as designed**, with slots `10.0.0.3 - 99` sitting empty and ready for future target VMs - no drift, no rogue devices.
 
 📎 Raw file: [`nmap-ping-scan.txt`](./W2-PM5/outputs/zenmap-ping-scan.txt)
 
@@ -502,9 +500,9 @@ ARP Ping Scan confirmed the same 2 live hosts in 1.85s. Deep SYN + version + OS 
 #### (c) Slow Comprehensive Scan
 `nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" 10.0.0.0/24`
 
-The most thorough scan of the engagement — 303 NSE scripts, full TCP **and** UDP sweep, ~11.6 minutes runtime.
+The most thorough scan of the engagement - 303 NSE scripts, full TCP **and** UDP sweep, ~11.6 minutes runtime.
 
-**`10.0.0.1` — Full port/service table:**
+**`10.0.0.1` - Full port/service table:**
 
 | Port | State | Service | Version/Notes |
 |---|---|---|---|
@@ -638,7 +636,7 @@ Topology tab → Legend enabled → exported as PDF.
 - **Information minimization matters** - WHOIS, DNS, and Google indexing collectively build a surprisingly complete external profile of an organization with zero direct contact.
 - **Passive ≠ harmless** - GHDB, Maltego and theHarvester are nearly impossible to detect yet they can surface real emails, subdomains and misconfigurations at massive scale.
 - **Active scanning is a different risk category** - Zenmap is detectable and unlike everything else in this engagement requires explicit authorization every single time.
-- **Lab validation is real engineering, not just following steps** - the Week 1 NAT Network was designed to hold exactly `10.0.0.1` (gateway) and `10.0.0.2` (Kali) with `10.0.0.3–99` reserved for future targets. PM5's ping scan found **precisely** that - proof the architecture holds up under actual tool usage not just on paper.
+- **Lab validation is real engineering, not just following steps** - the Week 1 NAT Network was designed to hold exactly `10.0.0.1` (gateway) and `10.0.0.2` (Kali) with `10.0.0.3 – 99` reserved for future targets. PM5's ping scan found **precisely** that - proof the architecture holds up under actual tool usage not just on paper.
 - **Defenders should think like attackers** - every tool used here (WHOIS through Nmap) is equally useful for an organization auditing its *own* exposure.
 - **Documentation is the deliverable** - raw tool output means nothing without risk context, evidence, and remediation guidance attached to it.
 
