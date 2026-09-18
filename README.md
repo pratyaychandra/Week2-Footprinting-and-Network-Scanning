@@ -62,7 +62,7 @@
 
 ## Final Report
 
-A formal, standalone penetration-testing-style report covering all 6 completed modules — including full evidence transcriptions, risk analysis, and recommendations — is available below.
+A formal, standalone penetration-testing-style report covering all 6 completed modules including full evidence transcriptions, risk analysis and recommendations.
 
 🔗 **[View Full Final Report (PDF)](./W2-PM-FINAL_REPORT/W2-PM-FINAL_REPORT.pdf)**
 
