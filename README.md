@@ -25,7 +25,7 @@
 ## 📑 Table of Contents
 
 - [Engagement Brief](#engagement-brief)
-- [Final Report](#FinalReport)
+- [Final Report](#finalreport)
 - [Legal & Ethical Notice](#legal--ethical-notice)
 - [Objective & Scope](#objective--scope)
 - [Arsenal - Tools Used](#arsenal--tools-used)
@@ -60,7 +60,7 @@
 
 ---
 
-## 📊 Final Report
+## Final Report
 
 A formal, standalone penetration-testing-style report covering all 6 completed modules — including full evidence transcriptions, risk analysis, and recommendations — is available below.
 
