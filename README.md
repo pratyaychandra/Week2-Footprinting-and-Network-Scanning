@@ -327,8 +327,8 @@ server: Apache
 | 1 | http://109.206.96.249:8080/ | `intitle:"webcam" inurl:"8080" -intext:"8080"` | None |
 | 2 | http://109.233.191.130:8080/multi.html | `intitle:"webcam" inurl:"8080" -intext:"8080"` | None |
 | 3 | http://66.206.54.197/ Display Cameras | `intitle:"Express6 Live Image"` | None |
-| 4 | http://109.164.203.165/control/userimage.html | `intitle:"IP CAMERA Viewer" intext:"setting"` | Client setting |
-| 5 | https://hj50ac9nwcc.sn.mynetname.net/cctv/ | `intitle:"IP CAMERA Viewer" intext:"setting"` | Client setting |
+| 4 | http://109.164.203.165/control/userimage.html | `intitle:"IP CAMERA Viewer" intext:"setting"` | None |
+| 5 | https://hj50ac9nwcc.sn.mynetname.net/cctv/ | `intitle:"IP CAMERA Viewer" intext:"setting"` | None |
 | 6 | https://tuwebcam.towson.edu/index.html | `intitle:"Webcam" inurl:WebCam.htm` | None |
 | 7 | http://72.199.200.5:8080/ | `intitle:webcamxp inurl:8080` | None |
 | 8 | http://139.64.168.120:8080/ | `intitle:webcamxp inurl:8080` | None |
