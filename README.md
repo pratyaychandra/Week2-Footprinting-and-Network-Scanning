@@ -455,11 +455,11 @@ This query hits **27+ data sources simultaneously**. The result set was far too 
 
 ---
 
-### PM5 - Network Scanning with Zenmap/Nmap
+### PM5 - Network Scanning with Zenmap
 
 **Target:** Own Lab LAN `10.0.0.0/24` (built in Week 1) · **Baseline:** Kali = `10.0.0.2`, Gateway = `10.0.0.1`
 
-> **Methodology disclosure:** The official task requires a single Ping Scan via the Windows Zenmap GUI. As bonus effort, I additionally ran two deeper scans **directly via `zenmap` CLI in the Kali terminal** rather than the Windows GUI - all three are documented below for full transparency.
+> **Methodology disclosure:** The official task requires a single Ping Scan via the Linux Kali's Zenmap GUI. As bonus effort, I additionally ran two deeper scans **directly via `zenmap` CLI in the Kali terminal** rather than the Windows GUI - all three are documented below for full transparency.
 
 ![Zenmap GUI 1](./W2-PM5/screenshots/zenmap-gui-1.png)
 ![Zenmap GUI 2 - Regular Scan](./W2-PM5/screenshots/zenmap-gui-2-regular-scan.png)
